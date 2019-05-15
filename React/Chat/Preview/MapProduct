@@ -2,12 +2,12 @@ import React from "react";
 import MapProductSolo from "./MapProductSolo";
 import PropTypes from "prop-types";
 
-const MapProducts = ({ products, index, url, checkForHttp }) => {
-  const mapProducts = products.map(product=>(
+const MapProducts = ({ products,url,checkForHttp }) => {
+  const mapProducts = products.map((product,index)=>(
     <MapProductSolo
       product={product}
       index={index}
-      url={url}
+      url={url[index]}
       checkForHttp={checkForHttp}
     />
     );
