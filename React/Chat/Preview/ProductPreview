@@ -20,7 +20,6 @@ class ProductPreview extends React.Component {
       for (let i = 0; i < this.props.url.length; i++) {
         const newString = this.props.url[i];
         const newArray = newString.match(/\d+/g);
-        _logger(newArray);
         const productId = newArray[1];
 
         productService
@@ -70,7 +69,10 @@ class ProductPreview extends React.Component {
               className={`${styles.messagePassed}`}
               dangerouslySetInnerHTML={{ __html: this.props.message }}
             />
-            {this.state.productTemplate}
+            <MapProducts
+               products={this.state.productArr}
+               checkForHttp={this.checkForHttp}
+            />
           </div>
         )}
       </React.Fragment>
