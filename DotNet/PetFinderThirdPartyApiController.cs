@@ -52,9 +52,5 @@ namespace personal_project.Controllers
                 throw ex;
             }
         }
-
-
-
-
     }
 }
