@@ -10,8 +10,7 @@ const _logger = logger.extend("ProductPreview");
 class ProductPreview extends React.Component {
   state = {
     product: null,
-    productArr: [],
-    productTemplate: []
+    productArr: []
   };
 
   componentDidMount() {
@@ -71,6 +70,7 @@ class ProductPreview extends React.Component {
             />
             <MapProducts
                products={this.state.productArr}
+               url={this.props.url}
                checkForHttp={this.checkForHttp}
             />
           </div>
