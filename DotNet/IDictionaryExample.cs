@@ -95,13 +95,8 @@ namespace pizzaApp.Services
             }
         }
 
-        
-
-
             return toppings;
         }
-   
-
 
         private SqlConnection GetConnection()
         {
